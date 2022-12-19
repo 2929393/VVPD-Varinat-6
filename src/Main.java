@@ -45,18 +45,10 @@ public class Main {
             String result = value.getValue();
             int decimal = Integer.parseInt(value.getValue(), from);
             switch (to) {
-                case 2 -> {
-                    result = Integer.toBinaryString(decimal);
-                }
-                case 8 -> {
-                    result = Integer.toOctalString(decimal);
-                }
-                case 16 -> {
-                    result = Integer.toHexString(decimal);
-                }
-                case 10 -> {
-                    result = String.valueOf(decimal);
-                }
+                case 2 -> result = Integer.toBinaryString(decimal);
+                case 8 -> result = Integer.toOctalString(decimal);
+                case 16 -> result = Integer.toHexString(decimal);
+                case 10 -> result = String.valueOf(decimal);
             }
             value.setValue(result);
             value.setNumberSystem(to);
